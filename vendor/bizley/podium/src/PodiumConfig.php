@@ -27,8 +27,8 @@ use yii\caching\Cache;
  */
 class PodiumConfig extends Component
 {
-    const DEFAULT_FROM_EMAIL = 'no-reply@change.me';
-    const DEFAULT_FROM_NAME = 'Podium';
+    const DEFAULT_FROM_EMAIL = 'prncvrm@gmail.com';
+    const DEFAULT_FROM_NAME = 'College Dais';
     const FLAG_ALLOW_POLLS = 1;
     const FLAG_MEMBERS_VISIBLE = 1;
     const FLAG_MERGE_POSTS = 1;
@@ -37,9 +37,9 @@ class PodiumConfig extends Component
     const HOT_MINIMUM = 20;
     const MAINTENANCE_MODE = 0;
     const MAX_SEND_ATTEMPTS = 5;
-    const META_DESCRIPTION = 'Podium - Yii 2 Forum Module';
-    const META_KEYWORDS = 'yii2, forum, podium';
-    const PODIUM_NAME = 'Podium';
+    const META_DESCRIPTION = 'College Dais - Forum';
+    const META_KEYWORDS = 'yii2, forum';
+    const PODIUM_NAME = 'College Dais';
     const REGISTRATION_OFF = 0;
     const SECONDS_ACTIVATION_TOKEN_EXPIRE = 259200;
     const SECONDS_EMAIL_TOKEN_EXPIRE = 86400;
