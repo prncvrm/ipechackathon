@@ -12,7 +12,7 @@ use bizley\podium\Podium;
 ?>
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <?= Podium::getInstance()->podiumConfig->get('name') ?> <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-left">Team Excellence</p>
+        <p class="pull-right">Ipec Hackathon</p>
     </div>
 </footer>
