@@ -279,7 +279,7 @@ class User extends UserActiveRecord
     {
         return [
             self::ROLE_MEMBER => Yii::t('podium/view', 'Member'),
-            self::ROLE_MODERATOR => Yii::t('podium/view', 'Moderator'),
+            self::ROLE_MODERATOR => Yii::t('podium/view', 'Senior'),
             self::ROLE_ADMIN => Yii::t('podium/view', 'Admin'),
         ];
     }
@@ -291,7 +291,7 @@ class User extends UserActiveRecord
     public static function getModRoles()
     {
         return [
-            self::ROLE_MODERATOR => Yii::t('podium/view', 'Moderator'),
+            self::ROLE_MODERATOR => Yii::t('podium/view', 'Senior'),
             self::ROLE_ADMIN => Yii::t('podium/view', 'Admin'),
         ];
     }

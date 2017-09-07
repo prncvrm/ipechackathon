@@ -65,7 +65,7 @@ $loggedId = User::loggedId();
 
 <?php if ($model->status == User::STATUS_ACTIVE): ?>
 <?php if ($model->role == User::ROLE_MEMBER): ?>
-                <p><button class="btn btn-primary" data-toggle="modal" data-target="#podiumModalPromote"><span class="glyphicon glyphicon-open"></span> <?= Yii::t('podium/view', 'Promote {name} to Moderator', ['name' => Html::encode($model->podiumName)]) ?></button></p>
+                <p><button class="btn btn-primary" data-toggle="modal" data-target="#podiumModalPromote"><span class="glyphicon glyphicon-open"></span> <?= Yii::t('podium/view', 'Promote {name} to Senior', ['name' => Html::encode($model->podiumName)]) ?></button></p>
 <?php elseif ($model->role == User::ROLE_MODERATOR): ?>
                 <p><button class="btn btn-warning" data-toggle="modal" data-target="#podiumModalDemote"><span class="glyphicon glyphicon-save"></span> <?= Yii::t('podium/view', 'Demote {name} to Member', ['name' => Html::encode($model->podiumName)]) ?></button></p>
 <?php endif; ?>
@@ -138,7 +138,7 @@ $loggedId = User::loggedId();
     'footerConfirmOptions' => ['class' => 'btn btn-success'],
     'footerConfirmUrl' => Url::to(['admin/promote', 'id' => $model->id])
  ]) ?>
-<p><?= Yii::t('podium/view', 'Are you sure you want to promote this user to Moderator?') ?></p>
+<p><?= Yii::t('podium/view', 'Are you sure you want to promote this user to Senior?') ?></p>
 <p><?= Yii::t('podium/view', 'You can choose forums for this user to moderate in next step.') ?></p>
 <?php Modal::end() ?>
 <?php Modal::begin([
