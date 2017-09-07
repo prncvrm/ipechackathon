@@ -37,7 +37,7 @@ $this->registerJs("$('[data-toggle=\"popover\"]').popover();");
                 'data-container' => 'body',
                 'data-toggle'    => 'popover',
                 'data-placement' => 'right',
-                'data-content'   => Yii::t('podium/view', 'Password must contain uppercase and lowercase letter, digit, and be at least 6 characters long.'),
+                'data-content'   => Yii::t('podium/view', 'Enter a password.'),
                 'data-trigger'   => 'focus'
             ])->label(false) ?>
             <?= $form->field($model, 'passwordRepeat')->passwordInput(['placeholder' => Yii::t('podium/view', 'Repeat password')])->label(false) ?>
@@ -70,11 +70,11 @@ $this->registerJs("$('[data-toggle=\"popover\"]').popover();");
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <?= Yii::t('podium/view', 'Forum Terms and Conditions') ?>
+                    <?= Yii::t('podium/view', 'Forum Terms and Condition') ?>
                 </h4>
             </div>
             <div class="panel-body">
-                <?= $terms ? $terms->content : Yii::t('podium/view', 'TO BE ANNOUNCED') ?>
+                <?= !$terms ? $terms->content : Yii::t('podium/view', 'TO BE ANNOUNCED') ?>
             </div>
         </div>
     </div>

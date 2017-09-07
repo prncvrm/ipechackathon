@@ -199,8 +199,8 @@ class AccountController extends BaseController
         if ($model->load(Yii::$app->request->post())) {
             $result = $model->register();
             if ($result == User::RESP_OK) {
-                Log::info('Activation link queued', !empty($model->id) ? $model->id : '', __METHOD__);
-                $this->success(Yii::t('podium/flash', 'Your account has been created but it is not active yet. Click the activation link that will be sent to your e-mail address in few minutes.'));
+                Log::info('Activated', !empty($model->id) ? $model->id : '', __METHOD__);
+                $this->success(Yii::t('podium/flash', 'Your account has been created and Activated.'));
                 return $this->module->goPodium();
             }
             if ($result == User::RESP_EMAIL_SEND_ERR) {

@@ -86,7 +86,7 @@ class User extends UserActiveRecord
             [['email', 'new_email'], 'email', 'message' => Yii::t('podium/view', 'This is not a valid e-mail address.')],
             ['email', 'unique'],
             ['new_email', 'unique', 'targetAttribute' => 'email'],
-            [['password', 'newPassword'], 'passwordRequirements'],
+            //[['password', 'newPassword'], 'passwordRequirements'],
             ['passwordRepeat', 'compare', 'compareAttribute' => 'password'],
             ['newPasswordRepeat', 'compare', 'compareAttribute' => 'newPassword'],
             ['username', 'unique'],
@@ -516,17 +516,17 @@ class User extends UserActiveRecord
         $this->setPassword($this->password);
         $this->generateActivationToken();
         $this->generateAuthKey();
-        $this->status = self::STATUS_REGISTERED;
+        $this->status = self::STATUS_ACTIVE;
 
         if (!$this->save()) {
             return self::RESP_ERR;
         }
-        if (empty($this->email)) {
+        /**if (empty($this->email)) {
             return self::RESP_NO_EMAIL_ERR;
         }
         if (!$this->sendActivationEmail()) {
             return self::RESP_EMAIL_SEND_ERR;
-        }
+        }**/
         return self::RESP_OK;
     }
 

@@ -30,7 +30,7 @@ class PodiumConfig extends Component
     const DEFAULT_FROM_EMAIL = 'prncvrm@gmail.com';
     const DEFAULT_FROM_NAME = 'College Dais';
     const FLAG_ALLOW_POLLS = 1;
-    const FLAG_MEMBERS_VISIBLE = 1;
+    const FLAG_MEMBERS_VISIBLE = 0;
     const FLAG_MERGE_POSTS = 1;
     const FLAG_USE_CAPTCHA = 1;
     const FLAG_USE_WYSIWYG = 1;
