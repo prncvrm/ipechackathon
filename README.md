@@ -1,2 +1,2 @@
 # ipechackathon
-hackathon @ ipec
+hackathon @ ipec Ghaziabad
