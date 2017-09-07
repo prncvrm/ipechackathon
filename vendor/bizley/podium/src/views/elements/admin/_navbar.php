@@ -35,22 +35,11 @@ use yii\helpers\Url;
             <span class="hidden-xs hidden-sm"><?= Yii::t('podium/view', 'Moderators') ?></span>
         </a>
     </li>
-    <li role="presentation" class="<?= $active == 'contents' ? 'active' : '' ?>">
-        <a href="<?= Url::to(['admin/contents']) ?>">
-            <span class="glyphicon glyphicon-text-color"></span>
-            <span class="hidden-xs hidden-sm"><?= Yii::t('podium/view', 'Contents') ?></span>
-        </a>
-    </li>
-    <li role="presentation" class="<?= $active == 'settings' ? 'active' : '' ?>">
-        <a href="<?= Url::to(['admin/settings']) ?>">
-            <span class="glyphicon glyphicon-cog"></span>
-            <span class="hidden-xs hidden-sm"><?= Yii::t('podium/view', 'Settings') ?></span>
-        </a>
-    </li>
+   <!--
     <li role="presentation" class="<?= $active == 'logs' ? 'active' : '' ?>">
         <a href="<?= Url::to(['admin/logs']) ?>">
             <span class="glyphicon glyphicon-filter"></span>
             <span class="hidden-xs hidden-sm"><?= Yii::t('podium/view', 'Logs') ?></span>
         </a>
-    </li>
+    </li>-->
 </ul>
