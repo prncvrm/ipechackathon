@@ -4,6 +4,6 @@ return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=podium',
     'username' => 'root',
-    'password' => 'root',
+    'password' => '1',
     'charset' => 'utf8',
 ];
