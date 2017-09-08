@@ -44,11 +44,14 @@ if (Podium::getInstance()->user->isGuest) {
             'active' => $this->context->id == 'admin'
         ];
     }
+    if (User::can(Rbac::ROLE_MODERATOR) || User::can(Rbac::ROLE_ADMIN)){
     $items[] = [
         'label' => Yii::t('podium/view', 'Members'),
         'url' => ['members/index'],
         'active' => $this->context->id == 'members'
     ];
+        
+    }
     $items[] = [
         'label' => Yii::t('podium/view', 'Profile ({name})', ['name' => $podiumUser->podiumName])
                     . ($subscriptionCount ? ' ' . Html::tag('span', $subscriptionCount, ['class' => 'badge']) : ''),
