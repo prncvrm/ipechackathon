@@ -367,10 +367,10 @@ class ForumPostController extends ForumThreadController
             ]);
         }
 
-        if (!User::can(Rbac::PERM_CREATE_POST)) {
+        /*if (!User::can(Rbac::PERM_CREATE_POST)) {
             $this->error(Yii::t('podium/flash', 'Sorry! You do not have the required permission to perform this action.'));
             return $this->redirect(['forum/index']);
-        }
+        }*/
 
         $model = new Post();
         $model->subscribe = 1;
