@@ -13,7 +13,6 @@ use yii\base\Model;
  */
 class LoginForm extends Model
 {
-    public $aesehi;
     public $username;
     public $password;
     public $rememberMe = true;
@@ -73,7 +72,6 @@ class LoginForm extends Model
      */
     public function getUser()
     {
-        public $aur_btao;
         if ($this->_user === false) {
             $this->_user = User::findByUsername($this->username);
         }
