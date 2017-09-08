@@ -211,8 +211,8 @@ class AccountController extends BaseController
                 return $this->module->goPodium();
             }
             if ($result == User::RESP_NO_EMAIL_ERR) {
-                Log::error('Error while queuing activation link - no email set', !empty($model->id) ? $model->id : '', __METHOD__);
-                $this->error(Yii::t('podium/flash', 'Sorry! There is no e-mail address saved with your account. Contact administrator about activating.'));
+                Log::error('Error:Wrong Referal', !empty($model->id) ? $model->id : '', __METHOD__);
+                $this->error(Yii::t('podium/flash', 'Sorry! Wrong Referal Code. Contact Admin/Senior Regarding it.'));
                 return $this->module->goPodium();
             }
         }

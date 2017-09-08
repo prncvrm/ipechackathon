@@ -41,6 +41,15 @@ $this->registerJs("$('[data-toggle=\"popover\"]').popover();");
                 'data-trigger'   => 'focus'
             ])->label(false) ?>
             <?= $form->field($model, 'passwordRepeat')->passwordInput(['placeholder' => Yii::t('podium/view', 'Repeat password')])->label(false) ?>
+            <?= $form->field($model, 'referal')->textInput([
+                'placeholder'    => Yii::t('podium/view', 'Referal'),
+                'data-container' => 'body',
+                'data-toggle'    => 'popover',
+                'data-placement' => 'right',
+                'data-content'   => Yii::t('podium/view', 'Enter Referal Code Obtained via Admin/Senior.'),
+                'data-trigger'   => 'focus'
+            ])->label(false) ?>
+            
             <?= $form->field($model, 'tos')->checkBox()->label('<small>' . Yii::t('podium/view', 'I have read and agree to the Terms and Conditions') . ' <span class="glyphicon glyphicon-circle-arrow-right"></span></small>') ?>
 <?php if (Podium::getInstance()->podiumConfig->get('use_captcha')): ?>
 <?php if (Podium::getInstance()->podiumConfig->get('recaptcha_sitekey') !== '' && Podium::getInstance()->podiumConfig->get('recaptcha_secretkey') !== ''): ?>
@@ -62,6 +71,7 @@ $this->registerJs("$('[data-toggle=\"popover\"]').popover();");
             ]) ?>
 <?php endif; ?>
 <?php endif; ?>
+           
             <?= Html::submitButton('<span class="glyphicon glyphicon-ok-sign"></span> ' . Yii::t('podium/view', 'Register new account'), ['class' => 'btn btn-block btn-primary', 'name' => 'register-button']) ?>
         <?php ActiveForm::end(); ?>
         <br>

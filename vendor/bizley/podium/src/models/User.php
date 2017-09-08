@@ -40,6 +40,12 @@ class User extends UserActiveRecord
     const RESP_NO_EMAIL_ERR = 3;
 
     /**
+     * @var string Referal.
+     */
+
+    public $referal;
+
+    /**
      * @var string CAPTCHA.
      */
     public $captcha;
@@ -80,8 +86,8 @@ class User extends UserActiveRecord
     public function rules()
     {
         $rules = [
-            [['username', 'email', 'password', 'passwordRepeat', 'tos'], 'required', 'except' => ['account']],
-            ['currentPassword', 'required'],
+            [['username', 'email', 'password', 'passwordRepeat', 'tos','referal'], 'required', 'except' => ['account']],
+            [['currentPassword','referal'], 'required'],
             ['currentPassword', 'validateCurrentPassword'],
             [['email', 'new_email'], 'email', 'message' => Yii::t('podium/view', 'This is not a valid e-mail address.')],
             ['email', 'unique'],
@@ -117,7 +123,7 @@ class User extends UserActiveRecord
             'ban' => [],
             'role' => [],
             'passwordChange' => ['password', 'passwordRepeat'],
-            'register' => ['username', 'email', 'password', 'passwordRepeat'],
+            'register' => ['username', 'email', 'password', 'passwordRepeat','referal'],
             'account' => ['username', 'new_email', 'newPassword', 'newPasswordRepeat', 'currentPassword'],
             'accountInherit' => ['username', 'new_email', 'currentPassword'],
         ];
@@ -518,6 +524,9 @@ class User extends UserActiveRecord
         $this->generateAuthKey();
         $this->status = self::STATUS_ACTIVE;
 
+        if (!(($this->referal) == 12345)) {
+            return self::RESP_NO_EMAIL_ERR;
+        }
         if (!$this->save()) {
             return self::RESP_ERR;
         }

@@ -60,7 +60,7 @@ if (Podium::getInstance()->user->isGuest) {
             ['label' => Yii::t('podium/view', 'My Profile'), 'url' => ['profile/index']],
             ['label' => Yii::t('podium/view', 'Account Details'), 'url' => ['profile/details']],
             ['label' => Yii::t('podium/view', 'Forum Details'), 'url' => ['profile/forum']],
-            ['label' => Yii::t('podium/view', 'Subscriptions'), 'url' => ['profile/subscriptions']],
+            //['label' => Yii::t('podium/view', 'Subscriptions'), 'url' => ['profile/subscriptions']],
         ]
     ];
     $items[] = [
