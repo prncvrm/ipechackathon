@@ -27,12 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= Yii::t('podium/view', 'Members List') ?>
         </a>
     </li>
-    <li role="presentation">
-        <a href="<?= Url::to(['members/mods']) ?>">
-            <span class="glyphicon glyphicon-scissors"></span>
-            <?= Yii::t('podium/view', 'Moderation Team') ?>
-        </a>
-    </li>
+    
 </ul>
 <br>
 <?= GridView::widget([
