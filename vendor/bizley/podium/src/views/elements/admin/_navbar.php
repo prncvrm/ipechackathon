@@ -32,7 +32,7 @@ use yii\helpers\Url;
     <li role="presentation" class="<?= $active == 'mods' ? 'active' : '' ?>">
         <a href="<?= Url::to(['admin/mods']) ?>">
             <span class="glyphicon glyphicon-scissors"></span>
-            <span class="hidden-xs hidden-sm"><?= Yii::t('podium/view', 'Moderators') ?></span>
+            <span class="hidden-xs hidden-sm"><?= Yii::t('podium/view', 'Seniors') ?></span>
         </a>
     </li>
    <!--
